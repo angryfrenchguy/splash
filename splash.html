@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<head>
+<style>
+
+    body {background-color: whitesmoke; font-family: "Arial"; font-size: 1.5em; padding: .75em; margin:.75em }
+    h1, h2, h3, h4, h5, h6 {padding: 0; margin: 0;}
+    .entete {padding: 0; margin: 0; font-size: .75em;}
+    button {width: 11em; height: 3.5em; border-radius: 5px; border-style: none;}
+    .lois {font-size: .5em; margin-left: .25em;}
+    #touteLaLoi {line-height: .75em;}
+</style>
+</head>
+    
+
+  
+   
+    
+    <div id="contenu">
+        
+    <p class="entete">Bienvenue sur le réseau</p>
+    <h1>Wifi</h1>
+    <p class="entete">des invités de</p>
+    <h4>Georges Boulanger</h4>
+    <br><br>
+    
+    <p style="font-size: .85em">Avez-vous dis merci à Georges?</p>
+    
+    <div>
+    <button style="display: inline-block; background-color: green;" onclick="monAutreFonction()">Oui</button>
+    <button style="display: inline-block; background-color: red; float: right;" onclick="maFonction()">Non</button>
+    </div>    
+        
+    <script>
+    function maFonction() {
+        document.getElementById("contenu").innerHTML = "<p>Fuck you. <br>No internet for you.</p>";        
+    }
+    </script>
+    
+    <script>
+    function monAutreFonction() {
+        document.getElementById("contenu").innerHTML = "<p>De rien. Ça fait plaisir.<br><br>Veuillez inscrire une adresse courriel et un mot de passe.</p>\
+            <input type=\"text\" style=\"font-size:0.8em; margin-left: 0;\" value=\"courriel\"><br>\
+            <input type=\"Text\" style=\"font-size:.8em; margin-left: 0;\" value=\"mot de passe\">\
+            <p style=\"font-size: .2em;\">(Utilisez le même mot de passe que vous utilisez avec votre institution bancaire.)</p>\
+            <br>\
+            <button onclick=\"termesEtConditions()\">Ok!</button>";
+    }
+    </script>
+    
+    <script>
+    function termesEtConditions() {
+        document.getElementById("contenu").innerHTML = "<p style=\"font-size: .7em;\">Je confirme avoir lu et compris</p>\
+            <div id=\"touteLaLoi\">\
+            <input type=\"checkbox\"><a class=\"lois\" href=\"http:\/\/www.legisquebec.gouv.qc.ca\/fr\/showdoc\/cs\/C-11\">La Charte de la langue française</a><br>\
+            <input type=\"checkbox\"><a class=\"lois\" href=\"http:\/\/www.un.org\/fr\/universal-declaration-human-rights\/index.html\">La Déclaration universelle des droits de l'homme</a><br>\
+            <input type=\"checkbox\"><a class=\"lois\" href=\"http:\/\/www.un.org\/fr\/universal-declaration-human-rights\/index.html\">Le Talmud de Jérusalem</a> <span style=\"font-size: .5em;\">et</span> <a class=\"lois\" href=\"http:\/\/www.un.org\/fr\/universal-declaration-human-rights\/index.html\">Le Talmud de Babylone</a><br>\
+            <input type=\"checkbox\"><a class=\"lois\" href=\"https:\/\/fr.wikipedia.org\/wiki\/Pierre-feuille-ciseaux\">Les règles offielles de Roche-Papier-Ciseaux</a><br>\
+            <input type=\"checkbox\"><a class=\"lois\" href=\"https:\/\/coalitionavenirquebec.org\/wp-content\/uploads\/2015\/11\/Plateforme-Electorale_FINAL-2.pdf\">\"Un parti pour les contribulables\" : la plateforme électorale de la Coalition Avenir Québec</a><br>\
+            <p style=\"font-size: .7em;\">ainsi que toutes les lois et les règlements pertinents à une utilisation légale et sécuritaire du réseau wifi mis à ma disposition par Georges.</p>\
+            <br>\
+            <button onclick=\"mail()\">Oui</button>\
+            </div>\
+            </p>"
+    }
+    </script>
+        
+    <script>
+    function mail() {
+        document.getElementById("contenu").innerHTML = "<p>Veuillez cocher la case et cliquer sur continuer</p>\
+        <input type=\"checkbox\"><span style=\"font-size: .5em;line-height: .5em;\">J'accepte de recevoir des appels random de Georges à n'importe qu'elle heure de la nuit.</span><br><br>\
+        <button style=\"display: inline-block;\" onclick=\"\">Continuer</button>"
+    }
+        
+    </script>
+    
+</body>
+</html>

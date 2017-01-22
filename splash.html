@@ -8,12 +8,11 @@
 <style>
 
     body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
-
-    h1 {font-size: 5em; margin: 0;}
-    h3{margin-top: 0;}
     #contenu {margin: 2em;}
     p {font-size: 1.5em; margin-bottom: 0; margin-top: .25em; padding: 0;}
-/*    .entete {padding: 0; margin: 0;}*/
+    .p1 {font-size: 1.25em;}
+    h1 {font-size: 8em; margin: 0; padding: 0px; display: inline; width: 100%; text-align: center;}
+    h2{margin-top: 0;}
     button {width: 6em; height: 3em; border-radius: 5px; border-style: none; font-size: larger; background-color: darkgrey; color: white;}
     input {line-height: 3em; font: courrier;}
     .lois {font-size: .75em; margin-left: .5em;}
@@ -26,14 +25,12 @@
    
     
     <div id="contenu">
-        
-    <p>Bienvenue sur le réseau</p>
-    <h1>Wifi</h1>
-    <p>des invités de</p>
-    <h3>Georges Boulanger</h3>
+    <p class="p1" style="margin-bottom: -25px";><span style="font-weight: bold;">Bienvenue</span> sur le réseau</p>
+    <h1>wifi</h1>
+    <p class="p1" style="margin-top: -20px;">des invités de <span style="font-weight: bold;">Georges</span></p>
     <br>
-    
-    <p>Avez-vous dis merci à Georges?</p>
+
+    <p>Avez-vous dit merci à Georges?</p>
     <br>
     <div>
     <button style="display: inline-block; background-color: green; margin-right: .25em;" onclick="monAutreFonction()">Oui</button>
@@ -80,7 +77,8 @@
     <script>
     function mail() {
         document.getElementById("contenu").innerHTML = "<p>Veuillez cocher la case et cliquer sur continuer</p>\
-        <input type=\"checkbox\"><span style=\"font-size: .5em;line-height: .5em;\">J'accepte de recevoir des appels random de Georges à n'importe qu'elle heure de la nuit.</span><br><br>\
+        <br>\
+        <input type=\"checkbox\"><span style=\"font-size: .75em;\"> J'accepte de recevoir des appels random de Georges à n'importe qu'elle heure de la nuit.</span><br><br>\
         <button style=\"display: inline-block;\" onclick=\"\">Continuer</button>"
     }
         

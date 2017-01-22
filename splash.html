@@ -7,20 +7,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
-    body {background-color: lightgrey; font-family: "Arial"; padding: .75em; margin:.75em }
-    h1, h2, h3, h4, h5, h6 {padding: 0; margin: 0;}
-    .entete {padding: 0; margin: 0;}
-    button {border-radius: 5px; border-style: none;}
+    body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+    h1 {font-size: 5em; margin: 0;}
+    h3{margin-top: 0;}
+    #contenu {margin: 2em;}
+    p {margin-bottom: 0; margin-top: .25em; padding: 0;}
+/*    .entete {padding: 0; margin: 0;}*/
+    button {width: 6em; height: 3em; border-radius: 5px; border-style: none;font-size: larger; color: white;}
     .lois {margin-left: 2.25em;}
-    #touteLaLoi {}
-    
-/*
-    @media screen and (min-width: 320pt) {
-    body {
-        font-size: 100%; background-color: lightgreen;
-    }
-}
-*/
+/*    #touteLaLoi*/
 </style>
 </head>
     
@@ -30,16 +26,16 @@
     
     <div id="contenu">
         
-    <p class="entete">Bienvenue sur le réseau</p>
+    <p>Bienvenue sur le réseau</p>
     <h1>Wifi</h1>
-    <p class="entete">des invités de</p>
-    <h4>Georges Boulanger</h4>
+    <p>des invités de</p>
+    <h3>Georges Boulanger</h3>
     <br><br>
     
     <p>Avez-vous dis merci à Georges?</p>
-    
+    <br>
     <div>
-    <button style="display: inline-block; background-color: green;" onclick="monAutreFonction()">Oui</button>
+    <button style="display: inline-block; background-color: green; margin-right: .25em;" onclick="monAutreFonction()">Oui</button>
     <button style="display: inline-block; background-color: red;" onclick="maFonction()">Non</button>
     </div>    
     

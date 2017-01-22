@@ -16,7 +16,7 @@
 /*    .entete {padding: 0; margin: 0;}*/
     button {width: 6em; height: 3em; border-radius: 5px; border-style: none; font-size: larger; background-color: darkgrey; color: white;}
     input {line-height: 3em; font: courrier;}
-    .lois {margin-left: 2.25em;}
+    .lois {font-size: .75em; margin-left: .5em;}
 /*    #touteLaLoi*/
 </style>
 </head>
@@ -52,8 +52,9 @@
     function monAutreFonction() {
         document.getElementById("contenu").innerHTML = "<p>De rien.<br><br>Veuillez inscrire une adresse courriel et le mot de passe de votre institution bancaire.</p>\
             <br>\
-            <input type=\"text\" value=\"courriel\"><br>\
-            <input type=\"Text\" value=\"mot de passe\">\
+            <input type=\"text\" name=\"courriel\" value=\"courriel\" onfocus=\"if(this.value=='courriel') {this.value='', this.style.color='#999'};\" onblur=\"if(this.value=='') {this.value='courriel', this.style.color='#555';}\"/>\
+            <br>\
+            <input type=\"text\" name=\"mot de passe\" value=\"mot de passe\" onfocus=\"if(this.value=='mot de passe') {this.value='', this.style.color='#999'};\" onblur=\"if(this.value=='') {this.value='mot de passe', this.style.color='#555';}\"/>\
             <br><br>\
             <button onclick=\"termesEtConditions()\">Ok!</button>";
     }
@@ -61,16 +62,16 @@
     
     <script>
     function termesEtConditions() {
-        document.getElementById("contenu").innerHTML = "<p>Je confirme avoir lu et compris</p>\
+        document.getElementById("contenu").innerHTML = "<p>Veuillez confirmer avoir lu et compris</p>\
+            <br>\
             <div id=\"touteLaLoi\">\
             <input type=\"checkbox\"><a class=\"lois\" href=\"http:\/\/www.legisquebec.gouv.qc.ca\/fr\/showdoc\/cs\/C-11\">La Charte de la langue française</a><br>\
             <input type=\"checkbox\"><a class=\"lois\" href=\"http:\/\/www.un.org\/fr\/universal-declaration-human-rights\/index.html\">La Déclaration universelle des droits de l'homme</a><br>\
-            <input type=\"checkbox\"><a class=\"lois\" href=\"http:\/\/www.un.org\/fr\/universal-declaration-human-rights\/index.html\">Le Talmud de Jérusalem</a> <span style=\"font-size: .5em;\">et</span> <a class=\"lois\" href=\"http:\/\/www.un.org\/fr\/universal-declaration-human-rights\/index.html\">Le Talmud de Babylone</a><br>\
+            <input type=\"checkbox\"><a class=\"lois\" href=\"http:\/\/www.un.org\/fr\/universal-declaration-human-rights\/index.html\">Le Talmud de Jérusalem</a> <span style=\"font-size: .75em; font-style:\italic;\">et</span><a class=\"lois\" href=\"http:\/\/www.un.org\/fr\/universal-declaration-human-rights\/index.html\">Le Talmud de Babylone</a><br>\
             <input type=\"checkbox\"><a class=\"lois\" href=\"https:\/\/fr.wikipedia.org\/wiki\/Pierre-feuille-ciseaux\">Les règles offielles de Roche-Papier-Ciseaux</a><br>\
             <input type=\"checkbox\"><a class=\"lois\" href=\"https:\/\/coalitionavenirquebec.org\/wp-content\/uploads\/2015\/11\/Plateforme-Electorale_FINAL-2.pdf\">\"Un parti pour les contribulables\" : la plateforme électorale de la Coalition Avenir Québec</a><br>\
-            <p style=\"font-size: .7em;\">ainsi que toutes les lois et les règlements pertinents à une utilisation légale et sécuritaire du réseau wifi mis à ma disposition par Georges.</p>\
             <br>\
-            <button onclick=\"mail()\">Oui</button>\
+            <button onclick=\"mail()\">Compris!</button>\
             </div>\
             </p>"
     }

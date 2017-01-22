@@ -12,9 +12,10 @@
     h1 {font-size: 5em; margin: 0;}
     h3{margin-top: 0;}
     #contenu {margin: 2em;}
-    p {margin-bottom: 0; margin-top: .25em; padding: 0;}
+    p {font-size: 1.5em; margin-bottom: 0; margin-top: .25em; padding: 0;}
 /*    .entete {padding: 0; margin: 0;}*/
     button {width: 6em; height: 3em; border-radius: 5px; border-style: none;font-size: larger; color: white;}
+    input {line-height: 3em; font: courrier;}
     .lois {margin-left: 2.25em;}
 /*    #touteLaLoi*/
 </style>
@@ -49,11 +50,11 @@
     
     <script>
     function monAutreFonction() {
-        document.getElementById("contenu").innerHTML = "<p>De rien. Ça fait plaisir.<br><br>Veuillez inscrire une adresse courriel et un mot de passe.</p>\
+        document.getElementById("contenu").innerHTML = "<p>De rien.<br><br>Veuillez inscrire une adresse courriel et le mot de passe de votre institution bancaire.</p>\
+            <br>\
             <input type=\"text\" value=\"courriel\"><br>\
             <input type=\"Text\" value=\"mot de passe\">\
-            <p>(Utilisez le même mot de passe que vous utilisez avec votre institution bancaire.)</p>\
-            <br>\
+            <br><br>\
             <button onclick=\"termesEtConditions()\">Ok!</button>";
     }
     </script>

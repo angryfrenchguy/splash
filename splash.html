@@ -7,16 +7,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
-    body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
-    #contenu {margin: 2em;}
-    p {font-size: 1.5em; margin-bottom: 0; margin-top: .25em; padding: 0;}
-    .p1 {font-size: 1.25em;}
-    h1 {font-size: 8em; margin: 0; padding: 0px; display: inline; width: 100%; text-align: center;}
-    h2{margin-top: 0;}
-    button {width: 6em; height: 3em; border-radius: 5px; border-style: none; font-size: larger; background-color: darkgrey; color: white;}
-    input {line-height: 3em; font: courrier;}
-    .lois {font-size: .75em; margin-left: .5em;}
-/*    #touteLaLoi*/
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    #contenu {
+        margin: 2em;
+    }
+    p {
+        font-size: 1.5em; margin-bottom: 0; margin-top: .25em; padding: 0;
+    }
+    .p1 {
+        font-size: 1.25em;
+    }
+    h1 {
+        font-size: 8em; margin: 0; padding: 0px; display: inline; width: 100%; text-align: center;
+    }
+    button {
+        display: inline-block; width: 6em; height: 3em; border-radius: 5px; border-style: none; font-size: larger; background-color: darkgrey; color: white;
+    }
+    input {
+        line-height: 2em; font: courrier;
+    }
+    .lois {
+        font-size: .75em; margin-left: .5em;
+    }
+    
+    @media screen and (min-width:700px) {
+        h1 {font-size:  10em;}
+        .p1 {font-size: 2em;}
+        p {font-size: 2.5em;}
+        buttons { width: 8em; height: 5em;}
+        .lois {font-size: 1em;}
+    }
+    
 </style>
 </head>
     
@@ -32,9 +55,9 @@
 
     <p>Avez-vous dit merci à Georges?</p>
     <br>
-    <div>
-    <button style="display: inline-block; background-color: darkgrey; margin-right: .25em;" onclick="monAutreFonction()">Oui</button>
-    <button style="display: inline-block; background-color: black;" onclick="maFonction()">Non</button>
+    <div id="boutons">
+    <button style="background-color: darkgrey; margin-right: .25em;" onclick="monAutreFonction()">Oui</button>
+    <button style="background-color: black;" onclick="maFonction()">Non</button>
     </div>    
     
     </div>
@@ -47,11 +70,9 @@
     
     <script>
     function monAutreFonction() {
-        document.getElementById("contenu").innerHTML = "<p>De rien.<br><br>Veuillez inscrire une adresse courriel et le mot de passe de votre institution bancaire.</p>\
+        document.getElementById("contenu").innerHTML = "<p>De rien.<br><br>Veuillez inscrire le mot de passe de votre institution bancaire.</p>\
             <br>\
-            <input type=\"text\" name=\"courriel\" value=\"courriel\" onfocus=\"if(this.value=='courriel') {this.value='', this.style.color='#999'};\" onblur=\"if(this.value=='') {this.value='courriel', this.style.color='#555';}\"/>\
-            <br>\
-            <input type=\"text\" name=\"mot de passe\" value=\"mot de passe\" onfocus=\"if(this.value=='mot de passe') {this.value='', this.style.color='#999'};\" onblur=\"if(this.value=='') {this.value='mot de passe', this.style.color='#555';}\"/>\
+            <input type=\"text\" name=\"mot de passe\" value=\"mot de passe\" style=\"color: lightgrey; font-size: 1.25em;\" onfocus=\"if(this.value=='mot de passe') {this.value='', this.style.color='#999'};\" onblur=\"if(this.value=='') {this.value='mot de passe', this.style.color='#999';}\"/>\
             <br><br>\
             <button onclick=\"termesEtConditions()\">Ok!</button>";
     }
@@ -79,14 +100,16 @@
         document.getElementById("contenu").innerHTML = "<p>Veuillez cocher la case et cliquer sur continuer</p>\
         <br>\
         <input type=\"checkbox\"><span style=\"font-size: .75em;\"> J'accepte de recevoir des appels random de Georges à n'importe qu'elle heure de la nuit.</span><br><br>\
-        <button style=\"display: inline-block;\" onclick=\"finale()\">Continuer</button>"
+        <button style=\"display: inline-block;\" onclick = finale()>Continuer</button>"
     }
     </script>
     
     <script>
     
     function finale() {
-        document.getElementById("contenu").innerHTML = "<iframe width=\"320\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>"   
+        
+        window.location.href = 'http://storage.torontosun.com/v1/blogs-prod-photos/e/3/d/c/3/e3dc3f5bc89fe5a9f479be551ee0c225.jpg?stmp=1353794204';
+           
     }    
         
     </script>

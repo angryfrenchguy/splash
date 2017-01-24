@@ -1,38 +1,39 @@
-<!DOCTYPE html>
-<html>
-<body>
-    
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-    body {
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>$GatewayName</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <style>
+
+            body {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
-    #contenu {
+            #contenu {
         margin: 2em;
     }
-    p {
+            p {
         font-size: 1.5em; margin-bottom: 0; margin-top: .25em; padding: 0;
     }
-    .p1 {
+            .p1 {
         font-size: 1.25em;
     }
-    h1 {
+            h1 {
         font-size: 8em; margin: 0; padding: 0px; display: inline; width: 100%; text-align: center;
     }
-    button {
+            button {
         display: inline-block; width: 6em; height: 3em; border-radius: 5px; border-style: none; font-size: larger; background-color: darkgrey; color: white;
     }
-    input {
+            input {
         line-height: 2em; font: courrier;
     }
-    .lois {
+            .lois {
         font-size: .75em; margin-left: .5em;
     }
     
-    @media screen and (min-width:700px) {
+            @media screen and (min-width:700px) {
         h1 {font-size:  10em;}
         .p1 {font-size: 2em;}
         p {font-size: 2.5em;}
@@ -40,24 +41,25 @@
         .lois {font-size: 1em;}
     }
     
-</style>
+        </style>
+    
+	   <script type="text/javascript">
+		function toggle(element) { document.getElementById(element).style.display = (document.getElementById(element).style.display == "none") ? "" : "none"; }
+	   </script>
 </head>
-    
 
-  
-   
-    
-    <div id="contenu">
-    <p class="p1" style="margin-bottom: -25px";><span style="font-weight: bold;">Bienvenue</span> sur le réseau</p>
-    <h1>wifi</h1>
-    <p class="p1" style="margin-top: -20px;">des invités de <span style="font-weight: bold;">Georges</span></p>
-    <br>
+<body>
+	<div id="contenu">
+        <p class="p1" style="margin-bottom: -25px";><span style="font-weight: bold;">Bienvenue</span> sur le réseau</p>
+        <h1>wifi</h1>
+        <p class="p1" style="margin-top: -20px;">des invités de <span style="font-weight: bold;">Georges</span></p>
+        <br>
 
-    <p>Avez-vous dit merci à Georges?</p>
-    <br>
-    <div id="boutons">
-    <button style="background-color: darkgrey; margin-right: .25em;" onclick="monAutreFonction()">Oui</button>
-    <button style="background-color: black;" onclick="maFonction()">Non</button>
+        <p>Avez-vous dit merci à Georges?</p>
+        <br>
+        <div id="boutons">
+        <button style="background-color: darkgrey; margin-right: .25em;" onclick="monAutreFonction()">Oui</button>
+        <button style="background-color: black;" onclick="maFonction()">Non</button>
     </div>    
     
     </div>
@@ -100,12 +102,18 @@
         document.getElementById("contenu").innerHTML = "<p>Veuillez cocher la case et cliquer sur continuer</p>\
         <br>\
         <input type=\"checkbox\"><span style=\"font-size: .75em;\"> J'accepte de recevoir des appels random de Georges à n'importe qu'elle heure de la nuit.</span><br><br>\
-        <button style=\"display: inline-block;\" onclick = finale()>Continuer</button>"
+        <form method=\"POST\" action=\"$action\">\
+							<input type=\"hidden\" name=\"mode_login\">\
+							<input type=\"hidden\" name=\"redirect\" value=\"$redirect\">\
+							<input type=\"hidden\" name=\"accept_terms\" value=\"yes\">\
+							<button type=\"submit\" value=\"Submit\">D'accord!\</button>\
+						</form>"
+        
     }
     </script>
     
+<!--
     <script>
-    
     function finale() {
         
         window.location.href = 'http://storage.torontosun.com/v1/blogs-prod-photos/e/3/d/c/3/e3dc3f5bc89fe5a9f479be551ee0c225.jpg?stmp=1353794204';
@@ -113,6 +121,8 @@
     }    
         
     </script>
-    
+-->
+						
+						
 </body>
 </html>
